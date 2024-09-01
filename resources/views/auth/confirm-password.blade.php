@@ -1,3 +1,4 @@
+@extends('adminlte::auth.passwords.confirm')
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
