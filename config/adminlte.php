@@ -305,72 +305,244 @@ return [
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
+        // Sidebar items:        
         [
             'text' => 'blog',
             'url' => 'admin/blog',
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
+            'text' => 'Inicio',
+            'route' =>'home',
+            //'url' => 'admin/pages',
+            'icon' => 'fas fa-fw fa-house-user',            
             'label' => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Estudiante'],
         [
-            'text' => 'profile',
+            'text' => 'Mis Cursos',
             'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-book',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Asistencia',
             'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-calendar-check',
         ],
+        
         [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
+            'text' => 'Calificaciones',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-graduation-cap',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Acceso a Notas',
                     'url' => '#',
+                    'icon' => 'fas fa-fw fa-clipboard',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Historial de Notas',
                     'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
+                    'icon' => 'fas fa-fw fa-layer-group',
+                ]
             ],
         ],
+        [
+            'text' => 'Horarios',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar',
+        ],
+        //Profesores
+        ['header' => 'Profesor'],
+        [
+            'text' => 'Mis Cursos',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-book',
+            'submenu' => [
+                [
+                    'text' => 'Cursos asignados',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-book-open',
+                ],
+                [
+                    'text' => 'Material de apoyo',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-layer-group',
+                ]
+            ],
+        ],
+        [
+            'text' => 'Asistencia',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar-check',
+            'submenu' => [
+                [
+                    'text' => 'Registro de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Consulta de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'Reporte de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-chart-bar',
+                ]
+            ],
+        ],
+        
+        [
+            'text' => 'Calificaciones',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-graduation-cap',
+            'submenu' => [
+                [
+                    'text' => 'Ingresar notas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-clipboard',
+                ],
+                [
+                    'text' => 'Historial de Notas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-layer-group',
+                ],
+                [
+                    'text' => 'Reportes de Notas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-chart-bar',
+                ]
+            ],
+        ],
+        [
+            'text' => 'Horarios',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar',
+        ],
+        //Administrador
+        
+        ['header' => 'Administrador'],
+        [
+            'text' => 'Administrar Profesores',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-book',
+        ],
+        [
+            'text' => 'Administrar Cursos',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar-check',
+        ],
+        
+        [
+            'text' => 'Administrar Matrículas',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-graduation-cap',
+            'submenu' => [
+                [
+                    'text' => 'Matrículas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-clipboard',
+                ],
+                [
+                    'text' => 'Reportes de Matrículas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-layer-group',
+                ] 
+            ],
+        ],
+        [
+            'text' => 'Administrar Asistencia',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar',
+            'submenu' => [
+                [
+                    'text' => 'Registro de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Consulta de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'Reporte de asistencia',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-chart-bar',
+                ]
+            ],
+        ],        
+        [
+            'text' => 'Administrar Aulas',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-house-user',
+            'submenu' => [
+                [
+                    'text' => 'Registro de aulas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Consulta de aulas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'Reporte de aulas',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-chart-bar',
+                ]
+            ],
+        ],
+        [
+            'text' => 'Administrar Horarios',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-calendar-check',
+            'submenu'=>[
+                [
+                    'text' => 'Registro de horarios',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Consulta de horarios',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ],
+                [
+                    'text' => 'Reporte de horarios',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-chart-bar',
+                ]
+            ]
+        ],        
+        [
+            'text' => 'Perfil',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-user-tie',
+            'submenu'=>[
+                [
+                    'text' => 'Datos Personales',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-users',
+                ],
+                [
+                    'text' => 'Cambiar Contraseña',
+                    'url' => '#',
+                    'icon' => 'fas fa-fw fa-user',
+                ]
+            ]
+        ],
+        [
+            'text' => 'Reportes',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-chart-bar',
+            
+        ],
+        //Labels
         ['header' => 'labels'],
         [
             'text' => 'important',
